@@ -1,0 +1,234 @@
+.App {
+    text-align: center;
+    background-color: #282c34;
+     }
+  .App1 {
+    background-color: #282c34;
+    min-height: 90vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    display: flex;
+  }
+ 
+  .btn_btnsubmit {
+    height: 18spx;
+    width: 100px;
+     position: absolute;
+     top: 60vh;
+     left: 50vw;
+  }
+  .test {
+    position: absolute;
+    top: 15vh;
+    left: 13vw;;
+  }
+  .Fb {
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    border-radius: 50px;
+    background-color: #1f4ad6e0;
+    height: 50px;
+    width: 300px;
+  }
+  .Fb1 {
+    position: absolute;
+    top: 40vh;
+    left: 10vw;
+    border-radius: 50px;
+    background-color: #da1f1fe0;
+    height: 50px;
+    width: 300px;
+  }
+  .Fb2 {
+    position: absolute;
+    top: 60vh;
+    left: 10vw;
+    border-radius: 50px;
+    background-color: #d6871fe0;
+    height: 50px;
+    width: 300px;
+  }
+  .switch {
+    position: absolute;
+    top: 7.2vh;
+    left: 25vw;
+  }
+  .tooglebutton {
+    position: fixed;
+    background-color: rosybrown;
+    height: 40px;
+    width: 100px;
+    top: 12vh;
+    font-style: oblique;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 30px;
+    right: 5vw;
+  }
+  .liverelay {
+    position: absolute;
+    border-width: 30px;
+    top: 22vh;
+    height: 50vh;
+    width: 30vw;
+    right: 10vw;
+  }
+  .facebook {
+    position: absolute;
+    top:3vh;
+    left:8vw;
+  }
+  .google {
+    position: absolute;
+    top:3vh;
+    left:14vw;
+  }
+  .amazon {
+    position: absolute;
+    top:3vh;
+    left:20vw;
+  }
+  .switch1 {
+    position: absolute;
+    top: -7.2vh;
+    left: 25vw;
+  }
+  .switch2 {
+    position: absolute;
+    top: -7.2vh;
+    left: 25vw;
+  }
+  .testmailing {
+    position: absolute;
+    width: 200px;
+    top: 25vh;
+    left: 13vw;
+  }
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  .email {
+    position: absolute;
+    left: 10vw;
+    top: 15vh;
+    height: 3vh;
+    width: 80vw;
+  }
+  .submit {
+    position: absolute;
+    top:70vh;
+    left: 45vw;
+    height: 5vh;
+    width: 10vw;
+  }
+  :hover.submit {
+    cursor: pointer;
+  }
+  .space {
+    height: 2vh;
+  }
+  .ema {
+    position: absolute;
+    left:6vw;
+    top: 10vh;
+  }
+  .mes {
+    position: absolute;
+    left:4vw;
+    top: 20vh;
+  }
+  .message {
+    position: absolute;
+    left: 10vw;
+    top: 25vh;
+    height: 40vh;
+    width: 80vw;
+  }
+  .Appheader {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .col {
+    position: absolute;
+    top: 3vh;
+    left: 10vw;
+    height: 5vh;
+    width: 5vw;
+    cursor: pointer;
+    
+  }
+  :hover.col{
+    color: #61dafb;
+  }
+  :hover.col1{
+    color: #61dafb;
+  }
+  :hover.col2{
+    color: #61dafb;
+  }
+  .col1 {
+    position: absolute;
+    top: 3vh;
+    left: 20vw;
+    height: 5vh;
+    width: 5vw;
+    cursor: pointer;
+  }
+  .col2 {
+    position: absolute;
+    top: 3vh;
+    left: 30vw;
+    height: 5vh;
+    width: 5vw;
+    cursor: pointer;
+  }
+  .head1 {
+    width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 10vh;
+   background: #2b2094;
+   color: aliceblue;
+  }
+  .navi {
+    width: 40%;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+  }
+  Link{
+    text-decoration: none;
+    color: #61dafb;
+    background-color: #61dafb;
+  }

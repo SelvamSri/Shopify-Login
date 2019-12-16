@@ -1,0 +1,127 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 30px; 
+  cursor: pointer;
+}
+.logo1 {
+  position: absolute;
+  top: 15px;
+  left: 155px; 
+  cursor: pointer;
+}
+
+.logo2 {
+  position: absolute;
+  top: 15px;
+  left: 285px; 
+  cursor: pointer;
+}
+.logo3 {
+  position: absolute;
+  top: 15px;
+  left: 415px; 
+  cursor: pointer;
+}
+.logo4 {
+  position: absolute;
+  top: 15px;
+  left: 545px; 
+  cursor: pointer;
+}
+.btn {
+  background-color: rgba(15, 141, 214, 0.74);
+  border: none;
+  width: 50%;
+  text-align: center;
+  padding: 14px;
+  border-radius: 4px;
+  color: white;
+}
+
+.input {
+  background: rgba(214, 204, 204, 0.877);
+  width: 75%;
+  padding: 14px;
+  border-radius: 4px;
+  border: 0;
+
+  color: #3E3E3E;
+}
+.loginform {
+  position: absolute;
+  top: 200px;
+  right: 170px;
+  height: 900px;
+  width: 300px;
+  padding: 5%;
+}
+.loginform1 {
+  position: absolute;
+  top: 50px;
+  right: 830px;
+  height: 900px;
+  width: 300px;
+  padding: 5%;
+}
+.class {
+  width: 50px;
+  height: 20px;
+}
+.button {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+}
+.Ap {
+  position: absolute;
+  right: -30px;
+  bottom: 760px;
+  height: 200px;
+  width: 400px;
+}
+.font {
+  color: #3E3E3E;
+}
+
+.gr {
+  position: absolute;
+  right: 50px;
+  top: 335px; 
+}
+.App1 {
+  height: 100vh;
+}
+
+.but {
+  background-color: transparent;
+  border-color: transparent;
+}
+.loginwith {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+} */

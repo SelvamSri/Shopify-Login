@@ -4,6 +4,8 @@ import SocialButton from './Amazon/Social'
 // import google from './logos/google_logo.png'
 import UserCard from './Amazon/userCard'
 import axios from 'axios';
+import Amazon from '../public/amazon';
+import Google from '../public/google';
 
 const image = {
 
@@ -55,6 +57,7 @@ export default class Demo extends Component {
     this.state = {
       logged: false,
       user: {},
+      shopURL: {},
       currentProvider: ''
     }
     this.nodes = {}
@@ -76,7 +79,9 @@ export default class Demo extends Component {
 
   onLoginSuccess (user) {
     console.log(user)
-      axios.post('https://sociallog.myshopify.com/admin/customers.json', user)
+    this.shopURL = 'sociallog'
+    console.log(this.state.shopURL)
+      axios.post(`https://sociallog.myshopify.com/admin/api/2019-10/customers.json`, user)
       .then(response => {
         console.log(response)
       })
@@ -150,7 +155,7 @@ export default class Demo extends Component {
           getInstance={this.setNodeRef.bind(this, 'google')}
           key={'google'}
         >
-          <img style={image.logo1} src="https://goanapp.com:3001/static/media/google_logo.52fe2301.png" title="google login" alt="google" height="150px" width="150px" />
+          <Google />
         </SocialButton>,
          <SocialButton
          provider='amazon'
@@ -161,7 +166,7 @@ export default class Demo extends Component {
          getInstance={this.setNodeRef.bind(this, 'amazon')}
          key={'amazon'}
        >
-         <img style={image.logo2} src="https://goanapp.com:3001/static/media/amazon_logo.884c4758.png" height="150px" width="150px" alt=""/>
+         <Amazon />
        </SocialButton>,
           <h5 style={image.loginwith}>or login with</h5>
       

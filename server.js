@@ -27,7 +27,8 @@ app.prepare().then(() => {
       scopes: ['write_themes','write_script_tags'],
       afterAuth(ctx) {
         const { shop, accessToken } = ctx.session;
-
+        console.log(`Access Token :  ${accessToken}`);
+        console.log(`Shop : ${shop}`);
         ctx.redirect('/');
       },
     }),

@@ -24,20 +24,21 @@ app.prepare().then(() => {
     createShopifyAuth({
       apiKey: SHOPIFY_API_KEY,
       secret: SHOPIFY_API_SECRET_KEY,
-      scopes: ['write_themes','write_script_tags'],
-      afterAuth(ctx) {
-        const { shop, accessToken } = ctx.session;
-
-        ctx.redirect('/');
+      scopes: ['write_themes','write_script_tags','read_customers','write_customers','unauthenticated_write_customers','unauthenticated_read_customers'],
+      afterAuth(MmS) {
+        const { shop, accessToken } = MmS.session;
+        console.log(`accessToken: ${accessToken}`);
+    console.log(`shop: ${shop}`);
+        MmS.redirect('/');
       },
     }),
   );
 
   server.use(verifyRequest());
-  server.use(async (ctx) => {
-    await handle(ctx.req, ctx.res);
-    ctx.respond = false;
-    ctx.res.statusCode = 200;
+  server.use(async (MmS) => {
+    await handle(MmS.req, MmS.res);
+    MmS.respond = false;
+    MmS.res.statusCode = 200;
     return
   });
 

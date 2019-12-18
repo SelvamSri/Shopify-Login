@@ -8179,6 +8179,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Amazon_userCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Amazon/userCard */ "./pages/Amazon/userCard.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "../node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _public_amazon__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../public/amazon */ "./public/amazon.js");
+/* harmony import */ var _public_google__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../public/google */ "./public/google.js");
 
 
 
@@ -8189,6 +8191,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
  // import insta from './logos/amazon_logo.png';
 
  // import google from './logos/google_logo.png'
+
+
 
 
 
@@ -8244,6 +8248,7 @@ function (_Component) {
     _this.state = {
       logged: false,
       user: {},
+      shopURL: {},
       currentProvider: ''
     };
     _this.nodes = {};
@@ -8266,7 +8271,9 @@ function (_Component) {
     key: "onLoginSuccess",
     value: function onLoginSuccess(user) {
       console.log(user);
-      axios__WEBPACK_IMPORTED_MODULE_9___default.a.post('https://sociallog.myshopify.com/admin/customers.json', user).then(function (response) {
+      this.shopURL = 'sociallog';
+      console.log(this.state.shopURL);
+      axios__WEBPACK_IMPORTED_MODULE_9___default.a.post("https://sociallog.myshopify.com/admin/api/2019-10/customers.json", user).then(function (response) {
         console.log(response);
       }).catch(function (error) {
         console.log(error);
@@ -8347,14 +8354,7 @@ function (_Component) {
           onLogoutFailure: this.onLogoutFailure,
           getInstance: this.setNodeRef.bind(this, 'google'),
           key: 'google'
-        }, __jsx("img", {
-          style: image.logo1,
-          src: "https://goanapp.com:3001/static/media/google_logo.52fe2301.png",
-          title: "google login",
-          alt: "google",
-          height: "150px",
-          width: "150px"
-        })), __jsx(_Amazon_Social__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        }, __jsx(_public_google__WEBPACK_IMPORTED_MODULE_11__["default"], null)), __jsx(_Amazon_Social__WEBPACK_IMPORTED_MODULE_7__["default"], {
           provider: "amazon",
           appId: "amzn1.application-oa2-client.0623170e36984f82a8b4ed9b1230a1cb",
           onLoginSuccess: this.onLoginSuccess,
@@ -8362,13 +8362,7 @@ function (_Component) {
           onLogoutSuccess: this.onLogoutSuccess,
           getInstance: this.setNodeRef.bind(this, 'amazon'),
           key: 'amazon'
-        }, __jsx("img", {
-          style: image.logo2,
-          src: "https://goanapp.com:3001/static/media/amazon_logo.884c4758.png",
-          height: "150px",
-          width: "150px",
-          alt: ""
-        })), __jsx("h5", {
+        }, __jsx(_public_amazon__WEBPACK_IMPORTED_MODULE_10__["default"], null)), __jsx("h5", {
           style: image.loginwith
         }, "or login with")];
       }
@@ -8485,7 +8479,141 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 1:
+/***/ "./public/amazon.js":
+/*!**************************!*\
+  !*** ./public/amazon.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var image = {
+  logo: {
+    position: 'absolute',
+    top: '15px',
+    left: '30px',
+    cursor: 'pointer'
+  },
+  logo1: {
+    position: 'absolute',
+    top: '15px',
+    left: '155px',
+    cursor: 'pointer'
+  },
+  logo2: {
+    position: 'absolute',
+    top: '15px',
+    left: '285px',
+    cursor: 'pointer'
+  },
+  logo3: {
+    position: 'absolute',
+    top: '15px',
+    left: '415px',
+    cursor: 'pointer'
+  },
+  logo4: {
+    position: 'absolute',
+    top: '15px',
+    left: '545px',
+    cursor: 'pointer'
+  },
+  loginwith: {
+    position: 'absolute',
+    top: '150px',
+    left: '150px'
+  }
+};
+
+function MyImage() {
+  // eslint-disable-next-line react/react-in-jsx-scope
+  return __jsx("img", {
+    style: image.logo2,
+    src: "./amazon_logo.png",
+    title: "facebook login",
+    alt: "facebook",
+    height: "150px",
+    width: "150px"
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MyImage);
+
+/***/ }),
+
+/***/ "./public/google.js":
+/*!**************************!*\
+  !*** ./public/google.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var image = {
+  logo: {
+    position: 'absolute',
+    top: '15px',
+    left: '30px',
+    cursor: 'pointer'
+  },
+  logo1: {
+    position: 'absolute',
+    top: '15px',
+    left: '155px',
+    cursor: 'pointer'
+  },
+  logo2: {
+    position: 'absolute',
+    top: '15px',
+    left: '285px',
+    cursor: 'pointer'
+  },
+  logo3: {
+    position: 'absolute',
+    top: '15px',
+    left: '415px',
+    cursor: 'pointer'
+  },
+  logo4: {
+    position: 'absolute',
+    top: '15px',
+    left: '545px',
+    cursor: 'pointer'
+  },
+  loginwith: {
+    position: 'absolute',
+    top: '150px',
+    left: '150px'
+  }
+};
+
+function MyImage() {
+  // eslint-disable-next-line react/react-in-jsx-scope
+  return __jsx("img", {
+    style: image.logo1,
+    src: "./google_logo.png",
+    title: "facebook login",
+    alt: "facebook",
+    height: "150px",
+    width: "150px"
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MyImage);
+
+/***/ }),
+
+/***/ 0:
 /*!*****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnua%2FDesktop%2FSelvam%2Ftesting%2Ffinally%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************************/
@@ -8508,5 +8636,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

@@ -93,6 +93,17 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/assign.js ***!
@@ -275,28 +286,6 @@ class SocialButton extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Componen
 
 /***/ }),
 
-/***/ "./pages/Amazon/colors.js":
-/*!********************************!*\
-  !*** ./pages/Amazon/colors.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ "./pages/Amazon/styles.js":
-/*!********************************!*\
-  !*** ./pages/Amazon/styles.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ "./pages/Amazon/userCard.js":
 /*!**********************************!*\
   !*** ./pages/Amazon/userCard.js ***!
@@ -324,10 +313,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _colors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./colors */ "./pages/Amazon/colors.js");
-/* harmony import */ var _colors__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_colors__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./styles */ "./pages/Amazon/styles.js");
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_styles__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
@@ -342,9 +327,10 @@ function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_cor
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
 
 
+ // import { card as cardStyle } from './styles'
 
-
-
+const cardStyle = {};
+const COLORS = {};
 
 const Detail = ({
   label,
@@ -355,7 +341,7 @@ const Detail = ({
   }
 }, __jsx("label", {
   style: {
-    color: _colors__WEBPACK_IMPORTED_MODULE_9___default.a.lightColor,
+    color: COLORS,
     paddingRight: '.25rem'
   }
 }, label, " :"), __jsx("span", null, data)); // const AccessToken = ({ token }) => {
@@ -412,15 +398,15 @@ class UserCard extends react__WEBPACK_IMPORTED_MODULE_8__["Component"] {
         textAlign: 'left'
       },
       avatar: {
-        background: _colors__WEBPACK_IMPORTED_MODULE_9___default.a.black,
+        background: COLORS.black,
         boxShadow: '0 0 12px rgba(0,0,0,0.5)',
-        border: `5px solid ${_colors__WEBPACK_IMPORTED_MODULE_9___default.a.white}`,
+        border: `5px solid ${COLORS.white}`,
         borderRadius: '50%',
         height: '7em',
         width: '7em',
         zIndex: '1'
       },
-      content: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_10__["card"], {
+      content: _objectSpread({}, cardStyle, {
         marginTop: '-.75rem'
       }),
       dataContainer: {
@@ -436,7 +422,7 @@ class UserCard extends react__WEBPACK_IMPORTED_MODULE_8__["Component"] {
         marginBottom: '.5rem'
       },
       button: {
-        color: _colors__WEBPACK_IMPORTED_MODULE_9___default.a.red,
+        color: COLORS.red,
         border: 'none',
         width: '100%',
         padding: '.5rem',
@@ -492,15 +478,18 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Demo; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Amazon_Social__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Amazon/Social */ "./pages/Amazon/Social.js");
-/* harmony import */ var _Amazon_userCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Amazon/userCard */ "./pages/Amazon/userCard.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_amazon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/amazon */ "./public/amazon.js");
-/* harmony import */ var _public_google__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/google */ "./public/google.js");
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Amazon_Social__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Amazon/Social */ "./pages/Amazon/Social.js");
+/* harmony import */ var _Amazon_userCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Amazon/userCard */ "./pages/Amazon/userCard.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_amazon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/amazon */ "./public/amazon.js");
+/* harmony import */ var _public_google__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/google */ "./public/google.js");
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
  // import insta from './logos/amazon_logo.png';
 
  // import google from './logos/google_logo.png'
@@ -546,14 +535,15 @@ const image = {
     left: '150px'
   }
 };
-class Demo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+class Demo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
       logged: false,
       user: {},
-      shopURL: {},
-      currentProvider: ''
+      shopURL: 'sociallog.myshopify.com',
+      currentProvider: '',
+      postDat: {}
     };
     this.nodes = {};
     this.onLoginSuccess = this.onLoginSuccess.bind(this);
@@ -570,19 +560,114 @@ class Demo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   onLoginSuccess(user) {
+    const postData = {
+      "customer": {
+        "first_name": user._profile.firstName,
+        "last_name": user._profile.lastName,
+        "email": user._profile.email,
+        "phone": '',
+        "addresses": []
+      }
+    }; // {
+    //   // "customer": {
+    //     "employee_name": user._profile.firstName,
+    //     "last_name": user._profile.lastName,
+    //     "email": user._profile.email,
+    //   // }
+    // };
+
+    const credentials = '1018379a7800263c6c14db4b045539df';
+    var basicAuth = 'Basic ' + credentials; // new part  doCORSRequest...
+    // var cors_api_url = 'https://sociallog.myshopify.com/admin/api/2019-10/customers.json';
+    // function doCORSRequest(options, printResult) {
+    //   var x = new XMLHttpRequest();
+    //   x.open(options.method, cors_api_url );
+    //   x.onload = x.onerror = function() {
+    //     printResult(
+    //       options.method + '\n' +
+    //       x.status + ' ' + x.statusText + '\n\n' +
+    //       (x.responseText || '')
+    //     );
+    //   };
+    //   if (/^POST/i.test(options.method)) {
+    //     x.setRequestHeader('Content-Type', 'application/json','Authorization', 'Bearer' +credentials);
+    //   }
+    //   x.send(options.data);
+    // }
+    // doCORSRequest({
+    //   method: 'POST',
+    //   url: 'https://sociallog.myshopify.com/admin/api/2019-10/customers.json',
+    //   data: postData,
+    // }, function printResult(result) {
+    //   console.log(result)
+    // });
+    //new end
+
     console.log(user);
-    this.shopURL = 'sociallog';
-    console.log(this.state.shopURL);
-    axios__WEBPACK_IMPORTED_MODULE_3___default.a.post(`https://sociallog.myshopify.com/admin/api/2019-10/customers.json`, user).then(response => {
-      console.log(response);
-    }).catch(error => {
-      console.log(error);
-    });
-    this.setState({
-      logged: true,
-      currentProvider: user._provider,
-      user
-    });
+    console.log(postData); // ajax post
+    // async function createUser() {
+    //   const response = await fetch('https://sociallog.myshopify.com/admin/api/2019-10/customers.json', {
+    //     method: 'POST',
+    //     headers:{
+    //     //  'X-Auth-Token': '6e57643ea3b05d34e1ecb6d86501229d'
+    //     },
+    //     mode: 'cors',
+    //     Accesstoken: '6e57643ea3b05d34e1ecb6d86501229d',
+    //     crossDomain: true,
+    //     body: postData,
+    //     // beforeSend : function(xhr) {
+    //     //   xhr.setRequestHeader("access_token", "6e57643ea3b05d34e1ecb6d86501229d");
+    //     //   },
+    //     }).then(response=> {
+    //     console.log('Ok', response)
+    //     })
+    //   .catch(error => {
+    //     console.log('Not Ok', error)
+    //   });
+    //   console.log(response)
+    // }
+    // createUser()
+
+    fetch('http://localhost:8888/products', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
+        "customer": {
+          "first_name": user._profile.firstName,
+          "last_name": user._profile.lastName,
+          "email": user._profile.email,
+          "phone": '',
+          "addresses": []
+        }
+      })
+    }).then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    }); // axios post
+    //   axios.post('https://sociallog.myshopify.com/admin/api/2019-10/cutomers.json',
+    //   postData, 
+    //   {
+    //     // 'Access-Control-Allow-Origin': 'https://sociallog.myshopify.com/admin/api/2019-10/customers.json',
+    //     // headers:{
+    //     //   'X-Shopify-Access-Tokken': 'd896e01ac7de25f44ee0ad764aac87d5',
+    //     //   'Content-Type': 'application/json',
+    //     // },
+    //     },
+    //     )
+    //   .then(response => {
+    //     console.log('Ok',response)
+    //   })
+    //   .catch(error => {
+    //     console.log('not Ok',error)
+    //   })
+    // this.setState({
+    //   logged: true,
+    //   currentProvider: user._provider,
+    //   user
+    // })
   }
 
   onLoginFailure(err) {
@@ -621,12 +706,12 @@ class Demo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     let children;
 
     if (this.state.logged) {
-      children = __jsx(_Amazon_userCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      children = __jsx(_Amazon_userCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
         user: this.state.user,
         logout: this.logout
       });
     } else {
-      children = [__jsx(_Amazon_Social__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      children = [__jsx(_Amazon_Social__WEBPACK_IMPORTED_MODULE_2__["default"], {
         provider: "facebook",
         appId: "743738122718119",
         onLoginSuccess: this.onLoginSuccess,
@@ -641,7 +726,7 @@ class Demo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         alt: "facebook",
         height: "150px",
         width: "150px"
-      })), __jsx(_Amazon_Social__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      })), __jsx(_Amazon_Social__WEBPACK_IMPORTED_MODULE_2__["default"], {
         provider: "google",
         appId: "555371152154-faiudnv4deckojvcuqsh2kdpf5obe12u.apps.googleusercontent.com",
         onLoginSuccess: this.onLoginSuccess,
@@ -650,7 +735,7 @@ class Demo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         onLogoutFailure: this.onLogoutFailure,
         getInstance: this.setNodeRef.bind(this, 'google'),
         key: 'google'
-      }, __jsx(_public_google__WEBPACK_IMPORTED_MODULE_5__["default"], null)), __jsx(_Amazon_Social__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, __jsx(_public_google__WEBPACK_IMPORTED_MODULE_6__["default"], null)), __jsx(_Amazon_Social__WEBPACK_IMPORTED_MODULE_2__["default"], {
         provider: "amazon",
         appId: "amzn1.application-oa2-client.0623170e36984f82a8b4ed9b1230a1cb",
         onLoginSuccess: this.onLoginSuccess,
@@ -658,7 +743,7 @@ class Demo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         onLogoutSuccess: this.onLogoutSuccess,
         getInstance: this.setNodeRef.bind(this, 'amazon'),
         key: 'amazon'
-      }, __jsx(_public_amazon__WEBPACK_IMPORTED_MODULE_4__["default"], null)), __jsx("h5", {
+      }, __jsx(_public_amazon__WEBPACK_IMPORTED_MODULE_5__["default"], null)), __jsx("h5", {
         style: image.loginwith
       }, "or login with")];
     }
@@ -700,7 +785,8 @@ __webpack_require__.r(__webpack_exports__);
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
- // import {Provider, Modal} from '@shopify/app-bridge-react';
+ // import Demo from './button.liquid'
+// import {Provider, Modal} from '@shopify/app-bridge-react';
 
 
 
@@ -725,7 +811,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    return __jsx("section", null, __jsx("input", {
+    return __jsx("section", null, __jsx("div", null, __jsx("input", {
       type: "button",
       className: "button",
       value: "Login",
@@ -742,7 +828,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "App1"
     }, __jsx("header", {
       className: "App-header1"
-    }, __jsx(_Amazonlogin__WEBPACK_IMPORTED_MODULE_2__["default"], null))))));
+    }, __jsx(_Amazonlogin__WEBPACK_IMPORTED_MODULE_2__["default"], null)))))));
   }
 
 }
@@ -905,6 +991,17 @@ module.exports = __webpack_require__(/*! /Users/nua/Desktop/Selvam/testing/final
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
+
+/***/ }),
+
+/***/ "core-js/library/fn/json/stringify":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/json/stringify" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 

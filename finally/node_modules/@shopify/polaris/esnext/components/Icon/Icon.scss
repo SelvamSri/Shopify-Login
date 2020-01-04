@@ -1,0 +1,230 @@
+@import '../../styles/common';
+
+.Icon {
+  display: block;
+  height: rem(20px);
+  width: rem(20px);
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.hasBackdrop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: spacing(extra-tight);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1 * spacing(extra-tight);
+    bottom: -1 * spacing(extra-tight);
+    left: -1 * spacing(extra-tight);
+    right: -1 * spacing(extra-tight);
+    border-radius: 50%;
+  }
+}
+
+.isColored {
+  color: color('white');
+}
+
+.colorWhite {
+  @include color-icon('white');
+  color: transparent;
+}
+
+.colorBlack {
+  @include color-icon('black');
+}
+
+.colorSkyLighter {
+  @include color-icon('sky', 'lighter');
+}
+
+.colorSkyLight {
+  @include color-icon('sky', 'light');
+}
+
+.colorSky {
+  @include color-icon('sky');
+}
+
+.colorSkyDark {
+  @include color-icon('sky', 'dark');
+}
+
+.colorInkLightest {
+  @include color-icon('ink', 'lightest');
+}
+
+.colorInkLighter {
+  @include color-icon('ink', 'lighter');
+
+  &::before {
+    background-color: color('sky');
+  }
+}
+
+.colorInkLight {
+  @include color-icon('ink', 'light');
+}
+
+.colorInk {
+  @include color-icon('ink');
+
+  &::before {
+    background-color: color('sky');
+  }
+}
+
+.colorBlueLighter {
+  @include color-icon('blue', 'lighter');
+}
+
+.colorBlueLight {
+  @include color-icon('blue', 'light');
+}
+
+.colorBlue {
+  @include color-icon('blue');
+}
+
+.colorBlueDark {
+  @include color-icon('blue', 'dark');
+
+  &::before {
+    background-color: color('blue', 'light');
+  }
+}
+
+.colorBlueDarker {
+  @include color-icon('blue', 'darker');
+}
+
+.colorIndigoLighter {
+  @include color-icon('indigo', 'lighter');
+}
+
+.colorIndigoLight {
+  @include color-icon('indigo', 'light');
+}
+
+.colorIndigo {
+  @include color-icon('indigo');
+}
+
+.colorIndigoDark {
+  @include color-icon('indigo', 'dark');
+}
+
+.colorIndigoDarker {
+  @include color-icon('indigo', 'darker');
+}
+
+.colorTealLighter {
+  @include color-icon('teal', 'lighter');
+}
+
+.colorTealLight {
+  @include color-icon('teal', 'light');
+}
+
+.colorTeal {
+  @include color-icon('teal');
+
+  &::before {
+    background-color: color('white');
+  }
+}
+
+.colorTealDark {
+  @include color-icon('teal', 'dark');
+
+  &::before {
+    background-color: color('teal', 'light');
+  }
+}
+
+.colorTealDarker {
+  @include color-icon('teal', 'darker');
+}
+
+.colorGreenLighter {
+  @include color-icon('green', 'lighter');
+}
+
+.colorGreen {
+  @include color-icon('green');
+
+  &::before {
+    background-color: color('green', 'lighter');
+  }
+}
+
+.colorGreenDark {
+  @include color-icon('green', 'dark');
+
+  &::before {
+    background-color: color('green', 'light');
+  }
+}
+
+.colorYellowLighter {
+  @include color-icon('yellow', 'lighter');
+}
+
+.colorYellow {
+  @include color-icon('yellow');
+}
+
+.colorYellowDark {
+  @include color-icon('yellow', 'dark');
+
+  &::before {
+    background-color: color('yellow', 'light');
+  }
+}
+
+.colorOrange {
+  @include color-icon('orange');
+}
+
+.colorOrangeDark {
+  @include color-icon('orange', 'dark');
+}
+
+.colorRedLighter {
+  @include color-icon('red', 'lighter');
+}
+
+.colorRed {
+  @include color-icon('red');
+}
+
+.colorRedDark {
+  @include color-icon('red', 'dark');
+
+  &::before {
+    background-color: color('red', 'light');
+  }
+}
+
+.colorPurple {
+  @include color-icon('purple');
+}
+
+.Svg,
+.Img {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Placeholder {
+  padding-bottom: 100%;
+  background: currentColor;
+}

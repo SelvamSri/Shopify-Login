@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import './App.css';
 import Demo from './Amazonlogin';
+// import Demo from './button.liquid'
 // import {Provider, Modal} from '@shopify/app-bridge-react';
 import Modal from 'react-awesome-modal';
 
@@ -29,15 +30,14 @@ class App extends Component {
         return (
             <section>
                 {/* <h1>Hello World !!!!</h1> */}
-                
+                <div>
                 <input type="button" className="button" value="Login" onClick={() => this.openModal()} />
                 <Modal 
                     visible={this.state.visible}
                     width="480"
                     height="550"
                     effect="fadeInDown"
-                    onClickAway={() => this.closeModal()}
-                >
+                    onClickAway={() => this.closeModal()}>
                     <div className="App">
                     <div className="App1">
       <header className="App-header1">
@@ -50,7 +50,7 @@ class App extends Component {
                     </div>
                     
                 </Modal>
-                
+                </div>
             </section>
         );
     }

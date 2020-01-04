@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
-import COLORS from './colors'
-import { card as cardStyle } from './styles'
 
+// import { card as cardStyle } from './styles'
+const cardStyle = {}
+const COLORS = {}
 const Detail = ({ label, data }) => (
   <div style={{ fontSize: '.8rem' }}>
-    <label style={{ color: COLORS.lightColor, paddingRight: '.25rem' }}>{label} :</label>
+    <label style={{ color: COLORS, paddingRight: '.25rem' }}>{label} :</label>
     <span>{data}</span>
   </div>
 )

@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 // import insta from './logos/amazon_logo.png';
 import SocialButton from './Amazon/Social'
 // import google from './logos/google_logo.png'
+
 import UserCard from './Amazon/userCard'
 import axios from 'axios';
 import Amazon from '../public/amazon';
 import Google from '../public/google';
+
 
 const image = {
 
@@ -51,14 +53,16 @@ loginwith: {
 }
 }
 export default class Demo extends Component {
+
   constructor (props) {
     super(props)
 
     this.state = {
       logged: false,
       user: {},
-      shopURL: {},
-      currentProvider: ''
+      shopURL: 'sociallog.myshopify.com',
+      currentProvider: '',
+      postDat: {}
     }
     this.nodes = {}
 
@@ -78,22 +82,164 @@ export default class Demo extends Component {
   }
 
   onLoginSuccess (user) {
+    const postData =  {
+      "customer": {
+        "first_name": user._profile.firstName,
+        "last_name": user._profile.lastName,
+        "email": user._profile.email,
+        "phone": '',
+        "addresses": []
+      }
+    }
+    // {
+    //   // "customer": {
+     
+    //     "employee_name": user._profile.firstName,
+    //     "last_name": user._profile.lastName,
+    //     "email": user._profile.email,
+    //   // }
+    // };
+    const credentials = '1018379a7800263c6c14db4b045539df';
+    var basicAuth = 'Basic ' + credentials;
+
+
+
+
+    // new part  doCORSRequest...
+
+
+
+
+    // var cors_api_url = 'https://sociallog.myshopify.com/admin/api/2019-10/customers.json';
+    // function doCORSRequest(options, printResult) {
+    //   var x = new XMLHttpRequest();
+    //   x.open(options.method, cors_api_url );
+    //   x.onload = x.onerror = function() {
+    //     printResult(
+    //       options.method + '\n' +
+    //       x.status + ' ' + x.statusText + '\n\n' +
+    //       (x.responseText || '')
+    //     );
+    //   };
+    //   if (/^POST/i.test(options.method)) {
+    //     x.setRequestHeader('Content-Type', 'application/json','Authorization', 'Bearer' +credentials);
+    //   }
+    //   x.send(options.data);
+    // }
+    // doCORSRequest({
+    //   method: 'POST',
+    //   url: 'https://sociallog.myshopify.com/admin/api/2019-10/customers.json',
+    //   data: postData,
+    // }, function printResult(result) {
+    //   console.log(result)
+    // });
+
+
+
+
+    //new end
     console.log(user)
-    this.shopURL = 'sociallog'
-    console.log(this.state.shopURL)
-      axios.post(`https://sociallog.myshopify.com/admin/api/2019-10/customers.json`, user)
-      .then(response => {
-        console.log(response)
+    
+    console.log(postData)
+
+
+
+
+    // ajax post
+
+
+
+
+
+
+
+
+
+    // async function createUser() {
+    //   const response = await fetch('https://sociallog.myshopify.com/admin/api/2019-10/customers.json', {
+    //     method: 'POST',
+    //     headers:{
+    //     //  'X-Auth-Token': '6e57643ea3b05d34e1ecb6d86501229d'
+    //     },
+    //     mode: 'cors',
+    //     Accesstoken: '6e57643ea3b05d34e1ecb6d86501229d',
+    //     crossDomain: true,
+    //     body: postData,
+    //     // beforeSend : function(xhr) {
+    //     //   xhr.setRequestHeader("access_token", "6e57643ea3b05d34e1ecb6d86501229d");
+    //     //   },
+    //     }).then(response=> {
+    //     console.log('Ok', response)
+    //     })
+    //   .catch(error => {
+    //     console.log('Not Ok', error)
+    //   });
+    //   console.log(response)
+    // }
+    
+    // createUser()
+
+
+    
+
+
+    fetch('http://localhost:8888/products', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          
+      },
+      body: JSON.stringify({
+        "customer": {
+          "first_name": user._profile.firstName,
+          "last_name": user._profile.lastName,
+          "email": user._profile.email,
+          "phone": '',
+          "addresses": []
+        }
       })
-      .catch(error => {
-        console.log(error)
-      })
-    this.setState({
-      logged: true,
-       
-      currentProvider: user._provider,
-      user
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
     })
+
+
+
+
+
+
+
+    // axios post
+
+
+
+
+
+
+
+    //   axios.post('https://sociallog.myshopify.com/admin/api/2019-10/cutomers.json',
+    //   postData, 
+    //   {
+    //     // 'Access-Control-Allow-Origin': 'https://sociallog.myshopify.com/admin/api/2019-10/customers.json',
+    //     // headers:{
+    //     //   'X-Shopify-Access-Tokken': 'd896e01ac7de25f44ee0ad764aac87d5',
+    //     //   'Content-Type': 'application/json',
+    //     // },
+    //     },
+    //     )
+    //   .then(response => {
+    //     console.log('Ok',response)
+    //   })
+    //   .catch(error => {
+    //     console.log('not Ok',error)
+    //   })
+    // this.setState({
+    //   logged: true,
+       
+    //   currentProvider: user._provider,
+    //   user
+    // })
   }
 
   onLoginFailure (err) {
@@ -178,3 +324,6 @@ export default class Demo extends Component {
     return children
   }
 }
+
+
+

@@ -8637,7 +8637,7 @@ function MyImage() {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!*****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnua%2FDesktop%2FSelvam%2Ftesting%2Ffinally%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************************/
@@ -8660,5 +8660,5 @@ module.exports = dll_5d7222cc92883af916fe;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

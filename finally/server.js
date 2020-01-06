@@ -26,8 +26,10 @@ const handle = apps.getRequestHandler();
 const { SHOPIFY_API_SECRET_KEY, SHOPIFY_API_KEY } = process.env;
 
 
+var  accessTo={};
 
-var accessToke = {};
+
+
 //added......
 
 // fetch('https://sociallog.myshopify.com/admin/api/2019-10/customers.json', {
@@ -77,6 +79,7 @@ apps.prepare().then(() => {
          "phone": '',
       "addresses": []
     }
+    
   }
  
  
@@ -92,7 +95,11 @@ createShopifyAuth({
         scopes: ['write_themes','write_script_tags','read_customers','write_customers','unauthenticated_write_customers','unauthenticated_read_customers'],
           afterAuth(MmS) {
            const { shop, accessToken } = MmS.session;
-           const accessToke=accessToken
+           const accessToke=accessToken;
+           const postData =  {
+            "id": accessToken,
+            "name": shop
+            }
              console.log(`accessToken: ${accessToken}`);
              console.log(`helloo nanbaaaa vanakaam ${accessToke}`)
                console.log(`shop: ${shop}`);
@@ -120,23 +127,23 @@ fetch(`https://${shop}/admin/api/2019-10/customers.json`, {
 })
 
 
-// fetch('http://dummy.restapiexample.com/api/v1/create', {
-//   method: 'POST',
-//   headers: {
-//       'Content-Type': 'application/json',
-//       // 'X-Shopify-Access-Token': accessToken,
-//   },
-//   body: JSON.stringify({
-//     "age": accessToken,
-//     "name": shop
-//   }),
+fetch('http://dummy.restapiexample.com/api/v1/create', {
+  method: 'POST',
+  headers: {
+      'Content-Type': 'application/json',
+      // 'X-Shopify-Access-Token': accessToken,
+  },
+  body: (postData),
   
-// }).then(res => {
-//   console.log(res)
-// }).catch(err => {
-//   console.log(err)
-// })
+}).then(res => {
+  console.log(res)
+}).catch(err => {
+  console.log(err)
+})
 
+accessTo = accessToke
+
+console.log(`selvamsri${accessTo}`)
 MmS.redirect('/');
        },
     }),
@@ -146,7 +153,7 @@ MmS.redirect('/');
 // });
 
   //  server.use(fetch(`https://${afterAuth.shop}/admin/api/2019-10/customers.json`))
-
+console.log(`good morning ${accessTo}`)
 
 
   server.use(verifyRequest());

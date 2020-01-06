@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server.js",
-    "dev1": "node index.js",
+    "dev1": "node node.js",
     "build": "next build",
     "client": "npm run dev",
     "server": "npm run dev1",
@@ -25,6 +25,7 @@
     "cors": "^2.8.5",
     "css": "^2.2.4",
     "dotenv": "^8.2.0",
+    "embed": "0.0.1",
     "embeddable-create-react-app": "^1.0.4",
     "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
